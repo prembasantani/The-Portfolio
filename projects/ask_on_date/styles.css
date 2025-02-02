@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
     font-family: "Tangerine", serif;
     font-weight: 400;
     background: linear-gradient(to top right, aliceblue 30%, pink);
