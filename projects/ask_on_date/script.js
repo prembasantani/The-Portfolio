@@ -10,15 +10,16 @@ function init_template() {
 
     $("#inner_box").on('click', 'button.no_btn', function(event) {
         counter++;
-        $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa?');
+        $("#how_dare_text").addClass('anger').html('how dare you even click it debaaaaaaaaaaaaa?');
 
-        console.log(counter);
         if (counter == 2) {
             $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa? Are you serious?');
         }
         else if (counter > 2) {
             $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa? nooooooooooo?');
         }
+
+        $(this).removeClass(['move_60', 'move_30'])
 
         if ($(this).hasClass('move_30')) {
             $(this).removeClass(['move_60', 'move_30']).addClass('move_60');
