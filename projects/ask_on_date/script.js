@@ -19,7 +19,7 @@ function init_template() {
             $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa? nooooooooooo?');
         }
 
-        $(this).removeClass(['move_60', 'move_30'])
+        // $(this).removeClass(['move_60', 'move_30']);
 
         if ($(this).hasClass('move_30')) {
             $(this).removeClass(['move_60', 'move_30']).addClass('move_60');

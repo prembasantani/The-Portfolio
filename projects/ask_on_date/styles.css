@@ -22,8 +22,16 @@
     text-align: center;
 }
 
+h1 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
 h1, h3 {
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 
 #inner_box {
@@ -129,7 +137,7 @@ div.buttons_div button.no_btn.move_30 {
 }
 
 div.buttons_div button.no_btn.move_60 {
-    transform: translateX(-100%);
+    transform: translateX(-250%);
 }
 
 #inner_box div.buttons_div button {
