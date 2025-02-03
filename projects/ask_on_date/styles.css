@@ -18,16 +18,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
+    padding: 30px;
 }
 
 h1 {
-    font-size: 55px;
+    font-size: 45px;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 h1, h3 {
@@ -38,7 +39,7 @@ h1, h3 {
     border-radius: 30px;
     border: 2px solid palevioletred;
     min-width: 60vw;
-    min-height: 60vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,6 +116,13 @@ h1, h3 {
     color: green;
 }
 
+#how_dare_text {
+    padding: 0;
+    margin: 0;
+    min-height: 70px;
+    font-size: 45px;
+}
+
 #inner_box div.buttons_div {
     display: flex;
     flex-direction: row;
@@ -126,6 +134,7 @@ h1, h3 {
 div.buttons_div button.no_btn {
     transition: transform 0.3 ease-in;
     transform-origin: 0 0;
+    z-index: 3;
 }
 
 div.buttons_div button.no_btn:hover {
@@ -133,11 +142,11 @@ div.buttons_div button.no_btn:hover {
 }
 
 div.buttons_div button.no_btn.move_30 {
-    transform: translateX(100%);
+    transform: translateX(40px);
 }
 
 div.buttons_div button.no_btn.move_60 {
-    transform: translateX(-250%);
+    transform: translateX(-150px);
 }
 
 #inner_box div.buttons_div button {

@@ -13,10 +13,11 @@ function init_template() {
         $("#how_dare_text").addClass('anger').html('how dare you even click it debaaaaaaaaaaaaa?');
 
         if (counter == 2) {
-            $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa? Are you serious?');
+            $("#how_dare_text").html('Are you serious?');
         }
-        else if (counter > 2) {
-            $("#how_dare_text").html('how dare you even click it debaaaaaaaaaaaaa? nooooooooooo?');
+        else if (counter == 3) {
+            $("#how_dare_text").html('nooooooooooo?');
+            counter = 0;
         }
 
         // $(this).removeClass(['move_60', 'move_30']);
