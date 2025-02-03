@@ -39,7 +39,7 @@ h1, h3 {
     border-radius: 30px;
     border: 2px solid palevioletred;
     min-width: 60vw;
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
