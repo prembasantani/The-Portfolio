@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Tangerine:wght@400;700&display=swap');
+
+#body_wrapper {
+    background-color: #ccc;
+    color: black;
+
+    background-image: url('./images/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#outer_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h1, h3 {
+    margin-bottom: 7px;
+}
+
+#inner_box {
+    border-radius: 30px;
+    border: 2px solid palevioletred;
+    min-width: 60vw;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-family: "Tangerine", serif;
+    /* font-family: "Emilys Candy", serif;; */
+    font-weight: 400;
+    background: linear-gradient(to top right, aliceblue 30%, pink);
+}
+
+.img_abs:where(.img_abs.num1, .img_abs.num2) {
+    position: absolute;
+    animation: animate_up 10s ease-in-out 0s infinite;
+    z-index: 1;
+}
+
+.img_abs:where(.img_abs.num3, .img_abs.num4, .img_abs.num5) {
+    position: absolute;
+    animation: animate_down 10s ease-in-out 0s infinite;
+    z-index: 1;
+}
+
+.img_abs img {
+    max-height: 140px;
+}
+
+@keyframes animate_up {
+    0% {
+        top: 110%;
+    }
+    100% {
+        top: -10%;
+    }
+}
+
+@keyframes animate_down {
+    0% {
+        bottom: 110%;
+    }
+    100% {
+        bottom: -10%;
+    }
+}
+
+#body_wrapper .img_abs.num1 {
+    left: 25%;
+    transform: translateX(-25%);
+}
+
+#body_wrapper .img_abs.num2 {
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+#body_wrapper .img_abs.num3 {
+    left: 0;
+}
+
+#body_wrapper .img_abs.num4 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#body_wrapper .img_abs.num5 {
+    right: 0;
+}
+
+#how_dare_text.alert {
+    color: red;
+}
+
+#how_dare_text:not(.alert) {
+    color: green;
+}
+
+#inner_box div.buttons_div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+div.buttons_div button.no_btn {
+    transition: transform 0.3 ease-in;
+    transform-origin: 0 0;
+}
+
+div.buttons_div button.no_btn:hover {
+    background-color: red;
+}
+
+div.buttons_div button.no_btn.move_30 {
+    transform: translateX(100%);
+}
+
+div.buttons_div button.no_btn.move_60 {
+    transform: translateX(-250%);
+}
+
+#inner_box div.buttons_div button {
+    min-width: 100px;
+    margin: 0 6px;
+    background: linear-gradient(to bottom right, #ff889c 43%, #974797);
+    border: 1px solid pink;
+    color: white;
+    font-size: 33px;
+    font-weight: 700;
+    padding: 2px 10px;
+    line-height: 1.3;
+}
