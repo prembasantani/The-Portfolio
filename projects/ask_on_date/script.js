@@ -10,7 +10,7 @@ function init_template() {
 
     $("#inner_box").on('click', 'button.no_btn', function(event) {
         counter++;
-        $("#how_dare_text").addClass('anger').html('how dare you even click it debaaaaaaaaaaaaa?');
+        $("#how_dare_text").addClass('alert').html('how dare you even click it debaaaaaaaaaaaaa?');
 
         if (counter == 2) {
             $("#how_dare_text").html('Are you serious?');
@@ -32,11 +32,10 @@ function init_template() {
             $(this).removeClass(['move_60', 'move_30']).addClass('move_30');
         }
         event.preventDefault();
-        // window.alert("How dare you?");
     });
 
     $("#inner_box").on('click', 'button.yes_btn', function() {
-        $("#how_dare_text").removeClass().html('Good Choice debaaaaaaaaaa. I love you. Letsss goooo');
+        $("#how_dare_text").removeClass(['alert']).html('Good Choice debaaaaaaaaaa. I love you');
     });
 
     imply_background();
