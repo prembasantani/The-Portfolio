@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <link rel="icon" href="./images/3.jpg">
+    <title>Happy Birthday Love</title>
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
@@ -12,35 +13,45 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="styles.css">
-
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js?LMO=2025-3-2"></script>
+    <link rel="stylesheet" href="styles.css?LMO=2025-3-2">
 </head>
 <body>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4 col-md-3 col-xl-2">
-                    <div class="logo_wrapper">
-                        <img src="" class="img-fluid" alt="Logo">
+    <div class="w-100 h-100" id="body_wrapper">
+        <div class="ml-auto mr-auto" id="outer_box">
+            <div id="inner_box">
+                <div id="img_wrapper" class="img_wrapper rotate_move_right text-end w-100 p-3">
+                    <h1 class="text-center">Will You Be My Valentine?</h1>
+                    <img id="valentine_img" class="img-fluid" src="./images/heart_box.png">
+                    <div style="min-height: 171px;" class="hidden" id="valentine_text"></div>
+                    <div class="open_box_btn">
+                        <button id="open_box" type="button" class="btn">Open the box</button>
                     </div>
                 </div>
-                <div class="col-6 col-md-7">
-                    <div class="search_flex">
-                        <div class="select_all">All</div>
-                        <div class="search_box">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <ul>
-                        <li>Account</li>
-                        <li>Cart</li>
-                    </ul>
+
+                <div class="w-100 hidden" id="fireworks_container">
+                    <img src="images/fireworks1.gif" class="img-fluid">
+                    <img src="images/fireworks2.gif" class="img-fluid">
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="img_abs num1">
+            <img src="./images/4.gif" class="img-fluid">
+        </div>
+        <div class="img_abs num2">
+            <img src="./images/5.gif" class="img-fluid">
+        </div>
+        <div class="img_abs num3">
+            <img src="./images/10.gif" class="img-fluid">
+        </div>
+        <div class="img_abs num5">
+            <img src="./images/11.gif" class="img-fluid">
+        </div>
+    </div>
+
+    <script>
+        init_template();
+    </script>
 </body>
 </html>
