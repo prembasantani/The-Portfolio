@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Happy Girlfriend Day</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="./app.css"/>
+</head>
+<body>
+	<div class="w-full h-screen space-x-5 space-y-6 mt-5 flex flex-row flex-wrap flex justify-center">
+		<div class="w-full text-center">
+			<h3 class="text-4xl text-shadow-lg font-bold text-pink-400 mt-3 mb-3 cursive_ff">Happy Girlfriend's Day Baby</h3>
+		</div>
+		<div class="left_slide w-1/3 text-center">
+			<div class="card">
+				<h4 class="text-2xl mb-3 text-rose-700 cursive_ff">Can't Stop Loving you!</h4>
+				<div class="inner_card h-full overflow-hidden">
+					<!-- Slider main container -->
+					<div class="swiper" id="swiper_slideshow">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<img class="w-full max-w-full h-auto" src="./img/1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="w-full max-w-full h-auto" src="./img/2.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="w-full max-w-full h-auto" src="./img/3.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="w-full max-w-full h-auto" src="./img/4.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4 class="text-md mt-3 mb-3 text-rose-500 cursive_ff  bg-emerald-50 p-4 rounded-sm">
+					My love for you is like a song that never fades — always playing softly in the background of everything I do. It's in the little moments, like a melody you hum without realizing, and in the big ones, like the chorus you can't wait to hear again. With every beat of my heart, I find new reasons to fall for you — over and over, endlessly. Just like music, it lifts me, calms me, and reminds me that the most beautiful things in life are felt, not explained.
+				</h4>
+			</div>
+		</div>
+		<div class="right_slide">
+			<div>
+				<input type="text" id="spotifyUrl" value="https://open.spotify.com/album/58eNU0JJvtAWAg9KUZ9Ghf?si=9YP1Rkx0QhKk9KkwbWRJVQ" class="w-sm border-1 bg-white-500 pt-1 pb-1 p-2 mb-2 rounded-md" placeholder="Paste Spotify track/playlist/album URL here" />
+				<button class="bg-sky-300 cursor-pointer pt-1 pb-1 p-3 mb-3 rounded-md" onclick="embedSpotify()">Play</button>
+				<br>
+				<div id="playerContainer"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function embedSpotify() {
+			const url = document.getElementById("spotifyUrl").value;
+			const idMatch = url.match(/(?:track|album|playlist)[\/:]([a-zA-Z0-9]+)/);
+			const typeMatch = url.match(/(track|album|playlist)/);
+
+			if (idMatch && typeMatch) {
+				const id = idMatch[1];
+				const type = typeMatch[1];
+				const embedUrl = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator`;
+
+				document.getElementById("playerContainer").innerHTML = `
+					<iframe style="border-radius:12px" src="${embedUrl}" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+				`;
+			} else {
+				alert("Please enter a valid Spotify URL.");
+				return;
+			}
+		}
+
+		$(document).ready(function() {
+			embedSpotify();
+
+			const swiper = new Swiper('#swiper_slideshow', {
+				speed: 1000,
+				autoplay: {
+					delay: 1000
+				},
+				slidesPerView: 1,
+  				spaceBetween: 10,
+				effect: 'cards',
+				cardsEffect: {
+					perSlideOffset: 10,
+					perSlideRotate: 0,
+					rotate: 45,
+					slideShadows: true,
+				}
+			});
+
+		})
+	</script>
+</body>
+</html>

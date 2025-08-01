@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sofia&display=swap');
+
+body {
+	font-family: "Playfair Display", serif;;
+	font-size: 17px;
+	background: url('https://images.stockcake.com/public/6/a/5/6a55d4c2-ff27-4577-89f2-03560dd0614e_large/textured-pink-heart-stockcake.jpg');
+	background-size: cover;
+	background-position: top;
+}
+
+.cursive_ff {
+	font-family: "Sofia", cursive;
+	font-style: normal;
+}
+
+#swiper_slideshow img {
+	border-radius: 10px;
+}
